@@ -1,0 +1,31 @@
+package q;
+import javax.swing.*;
+import java.awt.*;
+
+public class no10_1 extends JFrame {
+    public no10_1() {
+        setTitle("레이블 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+        
+        JLabel textLabel = new JLabel("라이언 고슬링 입니다");
+        
+        ImageIcon img= new ImageIcon("images/lion.jpeg");
+        JLabel imageLabel = new JLabel(img);
+        
+        ImageIcon icon = new ImageIcon("images/sad.jpeg");
+        JLabel label = new JLabel("아아아", icon, SwingConstants.CENTER);
+        
+        c.add(textLabel);
+        c.add(imageLabel);
+        c.add(label);
+        
+        setSize(300, 500);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new no10_1();
+    }
+}
